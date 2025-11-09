@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading Post...</title> <link rel="icon" type="image/png" href="withoutBackground.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <style>
+      /* --- আপনার index.html এর সম্পূর্ণ <style> ট্যাগটি এখানে কপি-পেস্ট করুন --- */
+      :root {
+        --color-primary: #2563eb;
+        --color-dark: #111827;
+        --color-dark-light: #1f2937;
+        --color-white: #ffffff;
+        --color-gray: #9ca3af;
+        --transition: all 0.3s ease;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+      body { font-family: "Poppins", sans-serif; background-color: var(--color-dark); color: var(--color-white); line-height: 1.6; overflow-x: hidden; }
+      a { text-decoration: none; color: inherit; }
+      /* --- Header --- */
+      header { position: fixed; top: 0; left: 0; width: 100%; padding: 20px 10%; background: rgba(17, 24, 39, 0.95); backdrop-filter: blur(10px); display: flex; justify-content: space-between; align-items: center; z-index: 1000; border-bottom: 1px solid #1f2937; }
+      .logo { font-size: 1.5rem; font-weight: 700; color: var(--color-white); }
+      .logo span { color: var(--color-primary); }
+      .navbar a { font-size: 1rem; color: var(--color-white); margin-left: 30px; font-weight: 500; transition: var(--transition); }
+      .navbar a:hover, .navbar a.active { color: var(--color-primary); }
+      #menu-icon { font-size: 2rem; color: var(--color-white); display: none; cursor: pointer; }
+      /* --- Footer --- */
+      footer { padding: 20px; text-align: center; background: var(--color-dark-light); border-top: 1px solid #374151; color: var(--color-gray); }
+      
+      /* --- NEW BLOG POST STYLES --- */
+      .blog-post-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 120px 20px 80px; /* হেডার এর নিচে থেকে শুরু */
+      }
+      .blog-post-container h1 {
+        font-size: 2.8rem;
+        color: var(--color-primary);
+        margin-bottom: 15px;
+        line-height: 1.2;
+      }
+      .blog-post-container .post-meta {
+        font-size: 0.9rem;
+        color: var(--color-gray);
+        margin-bottom: 30px;
+      }
+      .blog-post-container .post-main-image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 30px;
+      }
+      .blog-post-container .post-content p {
+        font-size: 1.1rem;
+        color: #d1d5db;
+        margin-bottom: 25px;
+        line-height: 1.8;
+      }
+      .blog-post-container .post-content h2 {
+        font-size: 2rem;
+        color: var(--color-white);
+        margin: 40px 0 20px;
+      }
+       .blog-post-container .post-content h3 {
+        font-size: 1.6rem;
+        color: var(--color-white);
+        margin: 30px 0 15px;
+      }
+      .blog-post-container .post-content blockquote {
+        border-left: 4px solid var(--color-primary);
+        padding-left: 20px;
+        margin: 30px 0;
+        font-style: italic;
+        color: var(--color-gray);
+      }
+      .blog-post-container .post-content pre {
+        background: var(--color-dark-light);
+        padding: 20px;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin-bottom: 25px;
+        color: #d1d5db;
+        font-family: 'Courier New', Courier, monospace;
+      }
+      .blog-post-container .post-content ul {
+        list-style-type: disc;
+        padding-left: 30px;
+        margin-bottom: 25px;
+        color: #d1d5db;
+      }
+      .blog-post-container .post-content li {
+        margin-bottom: 10px;
+      }
+      @media (max-width: 768px) {
+        #menu-icon { display: block; }
+        .navbar { position: absolute; top: 100%; left: 0; width: 100%; padding: 1rem 5%; background: var(--color-dark); border-top: 1px solid #374151; display: none; flex-direction: column; }
+        .navbar.active { display: flex; }
+        .navbar a { display: block; margin: 15px 0; font-size: 1.2rem; }
+        .blog-post-container h1 { font-size: 2rem; }
+        .blog-post-container .post-content h2 { font-size: 1.5rem; }
+      }
+    </style>
+</head>
+<body>
+    
+    <header>
+      <a href="index.html" class="logo">Sagar<span>.</span></a>
+      <i class="fa-solid fa-bars" id="menu-icon"></i>
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#contact">Contact</a>
+        <a href="https://drive.google.com/file/d/1iJTH8027xRGu5WOdQG3y79jDwPlYrMKw/view?usp=sharing" target="_blank" style="background: var(--color-primary); padding: 8px 15px; border-radius: 5px; margin-left: 15px; white-space: nowrap;">
+          Resume <i class="fas fa-eye"></i>
+        </a>
+      </nav>
+    </header>
+
+    <div class="blog-post-container" id="post-container">
+      <h1>Loading...</h1>
+      <div class="post-meta"></div>
+      <div class="post-content">
+        <p>Please wait while the article loads.</p>
+      </div>
+    </div>
+
+    <footer><p>© 2025 MD. Shafiul Alam Sagar. The lazy Programmer.</p></footer>
+
+    <script>
+        // --- আপনার Sanity Project ID এখানে বসান ---
+        const SANITY_PROJECT_ID = "cszqmh4e"; 
+        const SANITY_DATASET = "production";
+
+        const container = document.getElementById("post-container");
+
+        // 1. URL থেকে 'slug' বের করা
+        const params = new URLSearchParams(window.location.search);
+        const slug = params.get('slug');
+
+        if (!slug) {
+            container.innerHTML = "<h1>Error: No post specified.</h1><p>Please go back to the blog page and select a post.</p>";
+        } else {
+            // 2. এই slug দিয়ে Sanity-কে Query করা
+            const query = `*[_type == "post" && slug.current == "${slug}"][0] {
+                title,
+                "mainImage": mainImage.asset->url,
+                "authorName": author->name,
+                publishedAt,
+                body[] // <-- এটি হলো রিচ টেক্সট (Portable Text)
+            }`;
+            
+            const encodedQuery = encodeURIComponent(query);
+            const url = `https://${SANITY_PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${SANITY_DATASET}?query=${encodedQuery}`;
+
+            // 3. ডেটা Fetch করা
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    const post = data.result;
+                    if (!post) {
+                        container.innerHTML = "<h1>Post not found.</h1>";
+                        return;
+                    }
+
+                    // পেজের টাইটেল আপডেট করা
+                    document.title = post.title;
+
+                    // তারিখ ফরম্যাট করা
+                    const postDate = new Date(post.publishedAt).toLocaleDateString('en-US', {
+                        year: 'numeric', month: 'long', day: 'numeric'
+                    });
+
+                    // 4. HTML এ ডেটা বসানো
+                    container.innerHTML = `
+                        <h1>${post.title}</h1>
+                        <div class="post-meta">
+                            Published on ${postDate}
+                            ${post.authorName ? ` by ${post.authorName}` : ''}
+                        </div>
+                        ${post.mainImage ? `<img src="${post.mainImage}" alt="${post.title}" class="post-main-image">` : ''}
+                        <div class="post-content">
+                            ${portableTextToHtml(post.body)} </div>
+                    `;
+                })
+                .catch(error => {
+                    console.error("Error fetching post:", error);
+                    container.innerHTML = "<h1>Error loading post.</h1>";
+                });
+        }
+
+        // 5. Sanity-এর Portable Text কে HTML এ রূপান্তর করার ফাংশন
+        // এটি একটি বেসিক কনভার্টার। এটি শুধু h2, p, ul, li, blockquote সাপোর্ট করবে।
+        function portableTextToHtml(blocks) {
+            if (!blocks) return "";
+            
+            return blocks.map(block => {
+                if (block._type === 'block') {
+                    const style = block.style || 'normal';
+
+                    // লিস্ট আইটেম (ul)
+                    if (block.listItem === 'bullet') {
+                        // Sanity তে ul ট্যাগ শুরু বা শেষ হয় না, তাই আমাদের ম্যানেজ করতে হবে
+                        // এই বেসিক ভার্সনে আমরা শুধু li হিসেবেই দেখাবো
+                        return `<ul><li>${block.children.map(span => span.text).join('')}</li></ul>`;
+                    }
+                    
+                    // হেডিংস (h2)
+                    if (style === 'h2') {
+                        return `<h2>${block.children.map(span => span.text).join('')}</h2>`;
+                    }
+                    
+                    // হেডিংস (h3)
+                    if (style === 'h3') {
+                        return `<h3>${block.children.map(span => span.text).join('')}</h3>`;
+                    }
+
+                    // Blockquote
+                    if (style === 'blockquote') {
+                        return `<blockquote>${block.children.map(span => span.text).join('')}</blockquote>`;
+                    }
+                    
+                    // নরমাল প্যারাগ্রাফ
+                    return `<p>${block.children.map(span => span.text).join('')}</p>`;
+                }
+                
+                // কোড ব্লকের জন্য (যদি Sanity Studio-তে Code Input ব্যবহার করেন)
+                if (block._type === 'code') {
+                    return `<pre>${block.code}</pre>`;
+                }
+
+                return '';
+            }).join('');
+        }
+
+    </script>
+    
+    <script>
+      let menuIcon = document.querySelector("#menu-icon");
+      let navbar = document.querySelector(".navbar");
+      menuIcon.onclick = () => {
+        menuIcon.classList.toggle("fa-xmark");
+        navbar.classList.toggle("active");
+      };
+    </script>
+</body>
+</html>

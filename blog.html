@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sagar's Blog</title>
+    <link rel="icon" type="image/png" href="withoutBackground.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <style>
+      /* --- আপনার index.html এর সম্পূর্ণ <style> ট্যাগটি এখানে কপি-পেস্ট করুন --- */
+      /* (আমি শুধু জরুরি স্টাইলগুলো রাখছি) */
+      :root {
+        --color-primary: #2563eb;
+        --color-dark: #111827;
+        --color-dark-light: #1f2937;
+        --color-white: #ffffff;
+        --color-gray: #9ca3af;
+        --transition: all 0.3s ease;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--color-dark);
+        color: var(--color-white);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      section {
+        padding: 80px 10%;
+      }
+      .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background: var(--color-primary);
+        color: var(--color-white);
+        border-radius: 5px;
+        font-weight: 600;
+        transition: var(--transition);
+        border: 2px solid var(--color-primary);
+        cursor: pointer;
+      }
+      .btn:hover {
+        background: transparent;
+        color: var(--color-primary);
+        transform: translateY(-3px);
+      }
+      .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+      }
+      .section-title span {
+        color: var(--color-primary);
+      }
+      /* --- Header --- */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 10%;
+        background: rgba(17, 24, 39, 0.95);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        border-bottom: 1px solid #1f2937;
+      }
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--color-white);
+      }
+      .logo span {
+        color: var(--color-primary);
+      }
+      .navbar a {
+        font-size: 1rem;
+        color: var(--color-white);
+        margin-left: 30px;
+        font-weight: 500;
+        transition: var(--transition);
+      }
+      .navbar a:hover,
+      .navbar a.active {
+        color: var(--color-primary);
+      }
+      #menu-icon {
+        font-size: 2rem;
+        color: var(--color-white);
+        display: none;
+        cursor: pointer;
+      }
+      /* --- Project/Blog Card Styles --- */
+      #blog-page {
+        padding-top: 150px;
+        min-height: 80vh;
+      }
+      .projects-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+      .project-card {
+        background: var(--color-dark-light);
+        border-radius: 15px;
+        overflow: hidden;
+        border: 1px solid #374151;
+        transition: var(--transition);
+        display: flex;
+        flex-direction: column;
+      }
+      .project-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--color-primary);
+      }
+      .project-img-placeholder {
+        height: 200px;
+        background: #111827;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-gray);
+        font-size: 3rem;
+      }
+      /* নতুন: Blog Card Image Style */
+      .blog-card-image {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+      }
+      .project-info {
+        padding: 25px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .project-info h4 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+      .project-info p {
+        color: var(--color-gray);
+        margin-bottom: 20px;
+        font-size: 0.9rem;
+      }
+      .read-more-btn {
+        background: transparent;
+        border: none;
+        color: var(--color-primary);
+        font-weight: 600;
+        cursor: pointer;
+        text-align: left;
+        padding: 0;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .read-more-btn:hover {
+        text-decoration: underline;
+      }
+      /* --- Footer --- */
+      footer {
+        padding: 20px;
+        text-align: center;
+        background: var(--color-dark-light);
+        border-top: 1px solid #374151;
+        color: var(--color-gray);
+      }
+      @media (max-width: 768px) {
+        #menu-icon {
+          display: block;
+        }
+        .navbar {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          padding: 1rem 5%;
+          background: var(--color-dark);
+          border-top: 1px solid #374151;
+          display: none;
+          flex-direction: column;
+        }
+        .navbar.active {
+          display: flex;
+        }
+        .navbar a {
+          display: block;
+          margin: 15px 0;
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="logo">Sagar<span>.</span></a>
+      <i class="fa-solid fa-bars" id="menu-icon"></i>
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#contact">Contact</a>
+        <a
+          href="https://drive.google.com/file/d/1iJTH8027xRGu5WOdQG3y79jDwPlYrMKw/view?usp=sharing"
+          target="_blank"
+          style="
+            background: var(--color-primary);
+            padding: 8px 15px;
+            border-radius: 5px;
+            margin-left: 15px;
+            white-space: nowrap;
+          "
+        >
+          Resume <i class="fas fa-eye"></i>
+        </a>
+      </nav>
+    </header>
+
+    <section id="blog-page">
+      <h2 class="section-title">All <span>Blog Posts</span></h2>
+
+      <div class="projects-container" id="blog-list-container">
+        <p style="color: var(--color-gray)">Loading blog posts...</p>
+      </div>
+    </section>
+
+    <footer><p>© 2025 MD. Shafiul Alam Sagar. The lazy Programmer.</p></footer>
+
+    <script>
+      // --- আপনার Sanity Project ID এখানে বসান ---
+      // manage.sanity.io > Project > Settings এ পাবেন
+      const SANITY_PROJECT_ID = "cszqmh4e";
+
+      const SANITY_DATASET = "production";
+
+      // এটি হলো GROQ Query, যা Sanity কে বলে কি কি ডেটা আনতে হবে
+      const query = `*[_type == "post"] | order(publishedAt desc) {
+            title,
+            "slug": slug.current,
+            "mainImage": mainImage.asset->url,
+            "excerpt": pt::text(body[0...1]), // প্রথম প্যারাগ্রাফের কিছু অংশ
+            publishedAt
+        }`;
+
+      const encodedQuery = encodeURIComponent(query);
+      const url = `https://${SANITY_PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${SANITY_DATASET}?query=${encodedQuery}`;
+
+      const container = document.getElementById("blog-list-container");
+
+      // API থেকে ডেটা আনা
+      fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+          const posts = data.result;
+          container.innerHTML = ""; // "Loading..." লেখা সরানো
+
+          if (posts.length === 0) {
+            container.innerHTML =
+              "<p>No posts found. Go write one in Sanity Studio!</p>";
+            return;
+          }
+
+          posts.forEach((post) => {
+            const postCard = document.createElement("div");
+            postCard.className = "project-card";
+
+            // তারিখ ফরম্যাট করা
+            const postDate = new Date(post.publishedAt).toLocaleDateString(
+              "en-US",
+              {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              }
+            );
+
+            // কার্ডের ভেতরের HTML
+            postCard.innerHTML = `
+                        ${
+                          post.mainImage
+                            ? `<img src="${post.mainImage}" alt="${post.title}" class="blog-card-image">`
+                            : `<div class="project-img-placeholder"><i class="fas fa-feather-alt"></i></div>`
+                        }
+                        <div class="project-info">
+                            <div>
+                                <span style="color: var(--color-primary); font-size: 0.9rem;">${postDate}</span>
+                                <h4 style="font-size: 1.5rem; margin: 5px 0 10px;">${
+                                  post.title
+                                }</h4>
+                                <p>${
+                                  post.excerpt
+                                    ? post.excerpt.substring(0, 100) + "..."
+                                    : "No excerpt available..."
+                                }</p>
+                            </div>
+                            <a href="blog-post.html?slug=${
+                              post.slug
+                            }" class="read-more-btn" style="margin-top: 20px;">
+                                Read Article <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    `;
+            container.appendChild(postCard);
+          });
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+          container.innerHTML =
+            "<p>Error loading posts. Check Project ID and CORS settings.</p>";
+        });
+    </script>
+
+    <script>
+      let menuIcon = document.querySelector("#menu-icon");
+      let navbar = document.querySelector(".navbar");
+      menuIcon.onclick = () => {
+        menuIcon.classList.toggle("fa-xmark");
+        navbar.classList.toggle("active");
+      };
+    </script>
+  </body>
+</html>
