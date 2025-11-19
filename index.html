@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MD. Shafiul Alam Sagar</title>
+    <link rel="icon" type="image/png" href="./withoutBackground.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Sagar<span>.</span></a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#blog">Blog</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+            <a href="https://drive.google.com/file/d/1iJTH8027xRGu5WOdQG3y79jDwPlYrMKw/view?usp=sharing" target="_blank" style="background: var(--color-primary); padding: 8px 15px; border-radius: 5px; margin-left: 15px; white-space: nowrap;">Resume <i class="fas fa-eye"></i></a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero-content reveal">
+            <h3>Hello, It's Me</h3>
+            <h1>MD. Shafiul Alam <span>Sagar</span></h1>
+            <h3 class="typing-text">I'm a <span class="type-target"></span></h3>
+            <p>Aspiring entrepreneur and software engineer from Gazipur, blending technical expertise with a vision to build impactful solutions.</p>
+            <div style="margin-top: 30px">
+                <a href="#contact" class="btn">Hire Me</a>
+                <a href="#projects" class="btn btn-outline">View Work</a>
+            </div>
+            <div style="margin-top: 30px; font-size: 1.5rem">
+                <a href="https://www.linkedin.com/in/mdshafiulalamsagar/" target="_blank" style="margin-right: 20px; color: var(--color-primary)"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/mdshafiulalamsagar" target="_blank" style="margin-right: 20px; color: var(--color-white)"><i class="fab fa-github"></i></a>
+                <a href="mailto:m.shafiulalamsagar@gmail.com" style="color: var(--color-white)"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="hero-image-placeholder reveal" onclick="document.getElementById('modal-profile').classList.add('active')">
+            <span><img src="./withoutBackground.png" alt="Sagar" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;"></span>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title reveal">Latest <span>Projects</span></h2>
+        <div class="projects-container reveal" id="project-list-container">
+            <p style="text-align: center; grid-column: 1/-1; color: var(--color-gray);">Loading projects from Sanity...</p>
+        </div>
+    </section>
+
+    <section id="blog">
+        <h2 class="section-title reveal">Latest <span>Blogs</span></h2>
+        <div class="projects-container reveal" id="latest-blog-posts">
+            <p style="text-align: center; grid-column: 1/-1; color: var(--color-gray);">Loading blogs from Sanity...</p>
+        </div>
+        <div style="text-align: center; margin-top: 50px">
+            <a href="blog.html" class="btn">View All Posts</a>
+        </div>
+    </section>
+
+    <section id="about"><h2 class="section-title reveal">About <span>Me</span></h2><div class="about-content reveal"><p>I am currently pursuing my BSc in CSE at Uttara University. Passionate about ML and Entrepreneurship.</p></div></section>
+    
+    <section id="education"><h2 class="section-title reveal">My <span>Education</span></h2><div class="timeline reveal"><div class="timeline-item"><div class="timeline-dot"></div><span class="timeline-date">2023 - 2027</span><div class="timeline-content"><h3>BSc in CSE</h3><h4>Uttara University</h4></div></div></div></section>
+    
+    <section id="experience"><h2 class="section-title reveal">My <span>Experience</span></h2><div class="timeline reveal"><div class="timeline-item"><div class="timeline-dot"></div><span class="timeline-date">2025 - Present</span><div class="timeline-content"><h3>Python Instructor</h3><h4>ML Club</h4></div></div></div></section>
+
+    <section id="contact">
+        <h2 class="section-title reveal">Contact <span>Me</span></h2>
+        <div class="contact-grid reveal">
+            <div class="contact-column">
+                <h3>Formal Inquiry</h3>
+                <form id="contact-form" class="contact-form">
+                    <input type="text" name="name" id="form-name" placeholder="Your Name" required />
+                    <input type="email" name="email" id="form-email" placeholder="Your Email" required />
+                    <textarea name="message" id="form-message" rows="6" placeholder="Message" required></textarea>
+                    <p id="form-status" style="margin-bottom: 15px; font-weight: bold"></p>
+                    <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-column">
+                <h3>Casual Connect</h3>
+                <div class="casual-contact-box"><a href="https://facebook.com/..." target="_blank"><i class="fab fa-facebook"></i> Facebook</a></div>
+                <div class="casual-contact-box"><a href="https://wa.me/8801..." target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></div>
+            </div>
+        </div>
+    </section>
+
+    <footer><p>© 2025 MD. Shafiul Alam Sagar.</p></footer>
+
+    <div class="modal-overlay" id="modal-profile"><div class="modal-content"><span class="close-modal" onclick="this.parentElement.parentElement.classList.remove('active')">&times;</span><div class="modal-body"><h3>About Me</h3><p>Full bio here...</p></div></div></div>
+    <div class="modal-overlay" id="modal-1"><div class="modal-content"><span class="close-modal" onclick="this.parentElement.parentElement.classList.remove('active')">&times;</span><div class="modal-body" id="dynamic-modal-body"></div></div></div>
+
+    <script>
+        // --- MENU TOGGLE ---
+        let menuIcon = document.querySelector("#menu-icon");
+        let navbar = document.querySelector(".navbar");
+        menuIcon.onclick = () => { menuIcon.classList.toggle("fa-xmark"); navbar.classList.toggle("active"); };
+        
+        // --- TYPING ANIMATION ---
+        const typeTarget = document.querySelector(".type-target");
+        const texts = ["Software Engineer", "ML Enthusiast", "Entrepreneur"];
+        let count = 0, index = 0, currentText = "", letter = "";
+        (function type() {
+            if (count === texts.length) count = 0;
+            currentText = texts[count];
+            letter = currentText.slice(0, ++index);
+            typeTarget.textContent = letter;
+            if (letter.length === currentText.length) setTimeout(() => { index = 0; count++; }, 2000);
+            setTimeout(type, letter.length === currentText.length ? 2000 : 100);
+        })();
+
+        // --- SCROLL REVEAL ---
+        window.addEventListener("scroll", reveal);
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                if (revealtop < windowheight - 100) reveals[i].classList.add("active");
+            }
+        }
+        reveal();
+
+        // --- SANITY INTEGRATION ---
+        const SANITY_PROJECT_ID = "cszqmh4e"; // ✅ আপনার আইডি ঠিক আছে
+        const SANITY_DATASET = "production";
+        const BASE_URL = `https://${SANITY_PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${SANITY_DATASET}?query=`;
+
+        // 1. LOAD PROJECTS
+        fetch(BASE_URL + encodeURIComponent(`*[_type == "project"] | order(_createdAt desc) { title, shortDescription, fullDetails, liveUrl, githubUrl, "imageUrl": mainImage.asset->url }`))
+        .then(res => res.json())
+        .then(data => {
+            const container = document.getElementById("project-list-container");
+            if (!data.result.length) { container.innerHTML = "<p style='grid-column:1/-1;text-align:center;'>No projects found.</p>"; return; }
+            container.innerHTML = "";
+            data.result.forEach(project => {
+                const div = document.createElement("div");
+                div.className = "project-card";
+                div.innerHTML = `
+                    ${project.imageUrl ? `<img src="${project.imageUrl}" style="width:100%;height:200px;object-fit:cover;">` : ''}
+                    <div class="project-info" style="padding:20px;">
+                        <h4>${project.title}</h4>
+                        <p>${project.shortDescription}</p>
+                        <button class="read-more-btn" onclick="openProjectModal('${project.title}', '${project.fullDetails.replace(/\n/g, '')}', '${project.imageUrl || ''}', '${project.liveUrl}', '${project.githubUrl}')">Read More</button>
+                    </div>`;
+                container.appendChild(div);
+            });
+        });
+
+        // 2. LOAD BLOGS (Homepage limit 3)
+        fetch(BASE_URL + encodeURIComponent(`*[_type == "post"] | order(publishedAt desc)[0...3] { title, "slug": slug.current, "imageUrl": mainImage.asset->url, "excerpt": pt::text(body[0...1]), publishedAt }`))
+        .then(res => res.json())
+        .then(data => {
+            const container = document.getElementById("latest-blog-posts");
+            if (!data.result.length) { container.innerHTML = "<p style='grid-column:1/-1;text-align:center;'>No blogs found.</p>"; return; }
+            container.innerHTML = "";
+            data.result.forEach(post => {
+                const div = document.createElement("div");
+                div.className = "project-card";
+                div.innerHTML = `
+                    ${post.imageUrl ? `<img src="${post.imageUrl}" style="width:100%;height:200px;object-fit:cover;">` : ''}
+                    <div class="project-info" style="padding:20px;">
+                        <span style="color:var(--color-primary)">${new Date(post.publishedAt).toLocaleDateString()}</span>
+                        <h4>${post.title}</h4>
+                        <p>${post.excerpt.substring(0, 100)}...</p>
+                        <a href="blog-post.html?slug=${post.slug}" class="read-more-btn">Read Article</a>
+                    </div>`;
+                container.appendChild(div);
+            });
+        });
+
+        // MODAL FUNCTION
+        function openProjectModal(title, details, img, live, git) {
+            const modal = document.getElementById("modal-1");
+            document.getElementById("dynamic-modal-body").innerHTML = `
+                <h3>${title}</h3>
+                ${img ? `<img src="${img}" style="width:100%;border-radius:10px;">` : ''}
+                <p style="margin:20px 0;">${details}</p>
+                <p>${live ? `<a href="${live}" target="_blank" class="btn">Live</a>` : ''} ${git ? `<a href="${git}" target="_blank" class="btn btn-outline">Code</a>` : ''}</p>
+            `;
+            modal.classList.add("active");
+        }
+        
+        // FORMSPREE
+        document.getElementById("contact-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const status = document.getElementById("form-status");
+            fetch("https://formspree.io/f/mqagrbqd", { method: "POST", body: new FormData(e.target), headers: { 'Accept': 'application/json' } })
+            .then(r => { status.innerHTML = "Message Sent!"; status.style.color = "green"; e.target.reset(); })
+            .catch(() => { status.innerHTML = "Error sending message."; status.style.color = "red"; });
+        });
+    </script>
+</body>
+</html>
